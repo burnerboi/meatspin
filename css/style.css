@@ -1,0 +1,33 @@
+body {
+  background: url('../static/meatspin.gif') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    height: 99%;
+    align-items: flex-end;
+}
+
+span#timer_container::after {
+    content: " SPINS";
+}
+
+span#timer_container {
+    font-size: 130px;
+    font-family: sans-serif;
+    color: white;
+    text-shadow: 7px 7px 13px black;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>meatspin</title>
+<link href="./css/style.css" rel="stylesheet">
+<script type="text/javascript">
+window.onload = function () {
+    var start = +(new Date());
+    var node = document.getElementById('timer_container');
+    var interval = 1250;
+    var count = function () {
+        var now = +(new Date());
+        node.textContent = Math.floor((now-start)/interval);
+
+        var timeout = (now - start) % interval;
+        timeout = timeout !== 0 ? interval - timeout : interval;
+        setTimeout(count, timeout);
+    }
+    count();
+};
+</script>
+</head>
+<body>
+<div class="timer">
+    <span id="timer_container">0</span>
+</div>
+<audio autoplay hidden loop src="./static/rightround.mp3"></audio>
+<div>
+</div>
+</body>
+</html>
